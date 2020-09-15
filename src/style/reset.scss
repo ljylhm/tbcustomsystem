@@ -1,0 +1,97 @@
+html {
+    -webkit-text-size-adjust: none;
+}
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td {
+    margin: 0; 
+    padding: 0; 
+}
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.1em; 
+    font-weight: normal; 
+}
+address, cite, dfn, em, var {
+    font-style: normal; 
+}
+code, kbd, pre, samp {
+    font-family: courier new,courier,monospace; 
+}
+ul, ol {
+    list-style: none;
+}
+a {
+    text-decoration: none; 
+}
+a:hover {
+    text-decoration: none; 
+}
+legend {
+    color: #333; 
+}
+fieldset,img {
+    border: 0;
+    border: none;
+    width:100%;
+    display:block;
+}
+button,input,select,textarea {
+    font-size: 100%;
+    font-family: microsoft yahei;
+}
+button:focus , input:focus{
+    outline:0;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+input {
+    display: inline-block;
+    height: 0;
+    outline: none;
+    border: none;
+    -webkit-appearance: none;
+    appearance:none;
+    margin:0;
+    padding:0;
+}
+input[type=checkbox], input[type=radio]{
+    margin:0;
+}
+blockquote:before,
+blockquote:after{
+    content: '';
+    content: none;
+}
+th,td {
+    margin: 0;
+    padding: 0; 
+    text-align: left;
+    vertical-align: middle;
+}
+a,div,span,label {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -moz-tap-highlight-color: rgba(0, 0, 0, 0);
+    -o-tap-highlight-color: rgba(0, 0, 0, 0);
+    tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+    background: #fff;
+    color: #333;
+    line-height: 18px;
+    font-family:  Tahoma,"Helvetica Neue",Helvetica,Arial,sans-serif;;
+    p {
+        margin-top: 0;
+        margin-bottom: 0 ;
+    }
+ 
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+          
+}
+
