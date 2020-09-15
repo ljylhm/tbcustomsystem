@@ -3,16 +3,8 @@
     <div class="home-banner_container">
       <div class="home-board-container">
         <div class="home-ban_tab">
-          <span
-            :class="cur_mission == 'xl' ? 'cur' : ''"
-            @click="handleTabChange('xl')"
-            >销量任务</span
-          >
-          <span
-            :class="cur_mission == 'fg' ? 'cur' : ''"
-            @click="handleTabChange('fg')"
-            >复购任务</span
-          >
+          <span :class="cur_mission == 'xl' ? 'cur' : ''" @click="handleTabChange('xl')">销量任务</span>
+          <span :class="cur_mission == 'fg' ? 'cur' : ''" @click="handleTabChange('fg')">复购任务</span>
         </div>
 
         <div class="board-content" v-show="cur_mission == 'xl'">
@@ -25,9 +17,7 @@
                   : 'board-list_btn'
               "
               @click="handleXlChange('select_tb')"
-            >
-              淘宝
-            </div>
+            >淘宝</div>
             <div
               :class="
                 xlForm.select_jd
@@ -35,9 +25,7 @@
                   : 'board-list_btn'
               "
               @click="handleXlChange('select_jd')"
-            >
-              京东
-            </div>
+            >京东</div>
           </div>
 
           <div class="board-list_item">
@@ -49,9 +37,7 @@
                   : 'board-list_btn'
               "
               @click="handleXlChange('is_pc')"
-            >
-              电脑端
-            </div>
+            >电脑端</div>
             <div
               :class="
                 xlForm.is_phone
@@ -59,9 +45,7 @@
                   : 'board-list_btn'
               "
               @click="handleXlChange('is_phone')"
-            >
-              无线端
-            </div>
+            >无线端</div>
           </div>
 
           <div class="board-list_item">
@@ -73,9 +57,7 @@
                   : 'board-list_btn'
               "
               @click="handleXlChange('is_js')"
-            >
-              及时任务
-            </div>
+            >及时任务</div>
             <div
               :class="
                 xlForm.is_order
@@ -83,24 +65,17 @@
                   : 'board-list_btn'
               "
               @click="handleXlChange('is_order')"
-            >
-              预约任务
-            </div>
+            >预约任务</div>
           </div>
 
           <div class="board-list_item">
             <div class="board-list_label">金额上限</div>
             <div>
-              <el-input
-                v-model="xlForm.money_num"
-                class="board-list_input"
-              ></el-input>
+              <el-input v-model="xlForm.money_num" class="board-list_input"></el-input>
             </div>
           </div>
 
-          <div class="board-start_btn">
-            开始任务
-          </div>
+          <div class="board-start_btn">开始任务</div>
         </div>
 
         <div class="board-content" v-show="cur_mission == 'fg'">
@@ -113,9 +88,7 @@
                   : 'board-list_btn board-list_btn_select'
               "
               @click="handleXlChange('plat_form', 'tb')"
-            >
-              淘宝
-            </div>
+            >淘宝</div>
           </div>
 
           <div class="board-list_item">
@@ -127,9 +100,7 @@
                   : 'board-list_btn board-list_btn_select'
               "
               @click="handleXlChange('os', 'pc')"
-            >
-              电脑端
-            </div>
+            >电脑端</div>
             <div
               :class="
                 fgForm.os == 'pc'
@@ -137,18 +108,13 @@
                   : 'board-list_btn board-list_btn_select'
               "
               @click="handleXlChange('os', 'phone')"
-            >
-              无线端
-            </div>
+            >无线端</div>
           </div>
 
           <div class="board-list_item">
             <div class="board-list_label">金额上限</div>
             <div>
-              <el-input
-                v-model="fgForm.money_num"
-                class="board-list_input"
-              ></el-input>
+              <el-input v-model="fgForm.money_num" class="board-list_input"></el-input>
             </div>
           </div>
 
@@ -160,81 +126,59 @@
             </div>
           </div>
 
-          <div class="board-start_btn">
-            开始任务
-          </div>
+          <div class="board-start_btn">开始任务</div>
         </div>
       </div>
     </div>
 
     <div class="ad-container">
       <div class="ad-content">
-        
         <div class="ad-item">
           <div class="ad-item_header">待办事项</div>
           <div class="ad-item_content">
-            <div class="ad-logo_item">
-              <div class="ad-logo_item_pic">
-                <i class="el-icon-alarm-clock"></i>
-              </div>
-              <div class="ad-logo_item_content">
-                销量任务
-              </div>
+            <div class="font-12">
+              <span class="zy-font">温馨提示：</span>需要对以下任务点击查看后才能继续接手任务
             </div>
-
-            <div class="ad-logo_item">
-              <div class="ad-logo_item_pic">
-                <i class="el-icon-chat-line-round"></i>
-              </div>
-              <div class="ad-logo_item_content">
-                评价管理
-              </div>
-            </div>
-
-            <div class="ad-logo_item">
-              <div class="ad-logo_item_pic">
-                <i class="el-icon-view"></i>
-              </div>
-              <div class="ad-logo_item_content">
-                收费标准
-              </div>
-            </div>
-
-            <div class="ad-logo_item">
-              <div class="ad-logo_item_pic">
-                <i class="el-icon-document"></i>
-              </div>
-              <div class="ad-logo_item_content">黑名单列表</div>
-            </div>
+            <table class="ad-item_table" border="1">
+              <tr>
+                <td>
+                  <span style="font-weight:600;">评价任务</span>
+                </td>
+                <td>
+                  您存在
+                  <span class="zy-font">0</span>个待评价任务！
+                </td>
+                <td>
+                  <el-button size="mini" type="primary">立刻评价</el-button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span style="font-weight:600;">客服工单</span>
+                </td>
+                <td>
+                  您存在
+                  <span class="zy-font">0</span>待确认的工单！
+                </td>
+                <td>
+                  <el-button size="mini" type="primary">立刻查看</el-button>
+                </td>
+              </tr>
+            </table>
           </div>
         </div>
 
         <div class="ad-item">
-          <div class="ad-item_header">平台公告</div>
+          <div class="ad-item_header">账户余额</div>
           <div class="ad-item_content">
-            <div class="ad-logo_item">
-              <div class="ad-logo_item_pic">
-                <i class="el-icon-document"></i>
+            <div class="ad-item-money_container">
+              <div class="ad-item-money_left">
+                <div>账户存款：76.600 元</div>
+                <div>淘宝接手机会：2个</div>
+                <div>京东接手机会：4个</div>
+                <div>拼多多接手机会：4个</div>
               </div>
-              <div class="ad-logo_item_content">销量任务</div>
-            </div>
-            <div class="ad-logo_item">
-              <div class="ad-logo_item_pic">
-                <i class="el-icon-video-play"></i>
-              </div>
-              <div class="ad-logo_item_content">新手教程</div>
-            </div>
-            <div class="ad-logo_item">
-              <div class="ad-logo_item_pic">
-                <i class="el-icon-mic"></i>
-              </div>
-              <div class="ad-logo_item_content">所有公告</div>
-            </div>
-            <div class="ad-logo_item">
-              <div class="ad-logo_item_pic">
-                <i class="el-icon-user"></i>
-              </div>
-              <div class="ad-logo_item_content">邀请好友</div>
+              <div class="ad-item-money_right"></div>
             </div>
           </div>
         </div>
@@ -269,10 +213,7 @@
           </div>
         </div>
       </div>
-  
     </div>
-
-
   </div>
 </template>
 
@@ -334,6 +275,14 @@ export default class Home extends Vue {
 
 .zy-font {
   color: red;
+}
+
+.font-14 {
+  font-size: 14px;
+}
+
+.font-12 {
+  font-size: 12px;
 }
 
 .home {
@@ -459,10 +408,10 @@ export default class Home extends Vue {
     margin-top: 20px;
     @include flex(center);
     .ad-content {
-      width: 1200px;
+      width: 1300px;
       @include flex(space-between);
       .ad-item {
-        width: 570px;
+        width: 390px;
         .ad-item_header {
           @include setHeight(40px);
           background: #4882f0;
@@ -472,7 +421,41 @@ export default class Home extends Vue {
         .ad-item_content {
           @include flex(space-between);
           border: 1px solid #ddd;
+          height: 180px;
           padding: 20px;
+          .ad-item_table {
+            margin-top: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            td {
+              padding: 10px;
+            }
+          }
+
+          .ad-item-money_container {
+            width: 100%;
+            @include flex(flex-start);
+            box-sizing: border-box;
+            text-align: left;
+            background: url(http://aaa.66145.cn/themes/simplebootx/Public/home/css/img/money.jpg)
+              no-repeat right center;
+            .ad-item-money_left {
+              & > div {
+                width: 180px;
+                @include setHeight(25px);
+                cursor: pointer;
+                margin-bottom: 12px;
+                font-size: 14px;
+                transition: 2s;
+                &:hover {
+                  width: 200px;
+                  padding-left: 10px;
+                  background: #eee;
+                }
+              }
+            }
+          }
+
           .ad-logo_item {
             width: 110px;
             height: 120px;
