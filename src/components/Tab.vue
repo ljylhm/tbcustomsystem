@@ -10,17 +10,11 @@
         @select="handleSelect"
       >
         <el-menu-item index="/">首页</el-menu-item>
-        <el-submenu index="2">
-          <template slot="title">销量任务管理</template>
-          <el-menu-item index="/publish">发布任务</el-menu-item>
-          <el-menu-item index="/missionManage">任务管理</el-menu-item>
-          <el-menu-item index="2-3">评价管理</el-menu-item>
-          <el-menu-item index="2-3">任务模板</el-menu-item>
-        </el-submenu>
+        <el-menu-item index="/customManage">接手管理</el-menu-item>
         <el-submenu index="3">
-          <template slot="title">淘宝APP点击</template>
-          <el-menu-item index="3-1">发布流量任务</el-menu-item>
-          <el-menu-item index="3-2">流量任务管理</el-menu-item>
+          <template slot="title">评价任务</template>
+          <el-menu-item index="3-1">评价任务</el-menu-item>
+          <el-menu-item index="3-2">淘宝问大家</el-menu-item>
         </el-submenu>
         <el-submenu index="4">
           <template slot="title">资金管理</template>

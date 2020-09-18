@@ -104,7 +104,20 @@ const routes: Array<RouteConfig> = [
     path: '/orderManage',
     name: '/OrderManage',
     component: () => import(/* webpackChunkName: "about" */ '../views/orderManage.vue')
+  },
+  
+  // -------  客户端的路由 ------
+  {
+    path: '/customManage',
+    name: '/CustomManage',
+    component: () => import(/* webpackChunkName: "about" */ '../views/CustomManage.vue')
+  },
+  {
+    path: '/appRaise',
+    name: '/AppRaise',
+    component: () => import(/* webpackChunkName: "about" */ '../views/AppRaise.vue')
   }
+
 ]
 
 const router = new VueRouter({
